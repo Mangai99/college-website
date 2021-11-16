@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <style>
+        body 
+        {
+        background-image: linear-gradient(#00000071,#00000071),url(img/Reg.jpg); 
+        background-size: Cover; 
+        background-repeat: no-repeat; 
+        background-attachment: fixed;
+        background-position: center;
+        font-family: 'Times New Roman', Times, serif;
+        text-align: center;
+        color: floralwhite;
+        }
+        legend
+        {
+        outline: 1px solid black;
+        width: 200px;
+        background-color: lavender;
+        color: black;
+        }
+        fieldset
+        {
+        border: none;
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+<div class="register">
+    <h1 style="text-align: center; color: turquoise;">MAS ENGINEERING COLLEGE</h1>
+    <h2 style="text-align: center; color: tomato;">Registration Form</h2>
+    <form id="register">
+        <fieldset>
+            <legend><b>Personal Details</b></legend><br>
+                     <label for="firstlabel"><b>First Name:&nbsp &nbsp &nbsp &nbsp</b></label>
+                     <input type="textbox" id="firstname" name="first_name" placeholder="First Name" required><br><br>
+                     <label for="lastlabel"><b>Last Name:&nbsp &nbsp &nbsp &nbsp</b></label>
+                     <input type="textbox" id="lastname" name="last_name" placeholder="Last Name" required><br><br>
+                     <label for="email"><b>Email ID:&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</b></label>
+                     <input type="email" id="email" name="email" placeholder="Eg:abc@xyz.com" required><br><br>
+                     <label for="phonenumber"><b>Contact No:&nbsp &nbsp &nbsp &nbsp</b></label>
+                     <input type="textbox" id="phoneno" name="phone_no" required><br><br>
+                     <label for="birthday"><b>Birth Date:&nbsp &nbsp</b></label>
+                     <input type="date" id="birthday" name="birthday" placeholder="DD-MM-YYYY" required><br><br>
+                     <b>Gender:&nbsp &nbsp</b>
+                     <input type="radio" id="Male" name="gender" required>
+                     <label for="male">Male</label>
+                     <input type="radio" id="Female" name="gender" required>
+                     <label for="female">Female</label>
+                     <br><br>
+                     <label for="nationality"><b>Nationality:&nbsp &nbsp &nbsp &nbsp</b></label>
+                     <input type="textbox" id="nationality" name="nationality" placeholder="Nationality" required><br><br>
+                     <label for="fathername"><b>Father's Name:&nbsp</b></label>
+                     <input type="textbox" id="fathername" name="father_name" placeholder="Father's Name" required><br><br>
+                     <label for="mothername"><b>Mother's Name:&nbsp</b></label>
+                     <input type="textbox" id="mothername" name="mother_name" placeholder="Mother's Name" required><br><br>
+                     <b>Address:&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</b>
+                     <textarea name="address" row="5" column="10" placeholder="Enter your address" required></textarea>
+                    
+        </fieldset><br>
+        <fieldset>
+            <legend><b>Educational Details</b></legend>
+              <h4><u>SSC</u></h4>
+              <label for="SSC"><b>SSC Marks:&nbsp &nbsp &nbsp</b></label>
+              <input type="text" id="marks" name="marks" placeholder="Score" required><br><br>
+              <label for="schoolname"><b>School Name:&nbsp &nbsp</b></label>
+              <input type="text" id="schoolname" name="school_name" placeholder="Enter School Name" required><br><br>
+              <label for="SSC"><b>Year of Passed Out:&nbsp</b></label>
+              <select id="year" name="year" required>
+                <script>
+                    var myDate = new Date();
+                    var year = myDate.getFullYear();
+                    for(var i = 2012; i < year+1; i++){
+                        document.write('<option value="'+i+'">'+i+'</option>');
+                    }
+                    </script>
+              </select>
+              <br><br>
+              <h4><u>HSC</u></h4>
+              <label for="HSC"><b>HSC Marks:&nbsp &nbsp &nbsp</b></label>
+              <input type="text" id="marks" name="marks" placeholder="Score" required><br><br>
+              <label for="schoolname"><b>School Name:&nbsp &nbsp</b></label>
+              <input type="text" id="schoolname" name="school_name" placeholder="Enter School Name" required><br><br>
+              <label for="HSC"><b>Year of Passed Out:&nbsp</b></label>
+              <select id="year" name="year" required>
+                <script>
+                    var myDate = new Date();
+                    var year = myDate.getFullYear();
+                    for(var i = 2012; i < year+1; i++){
+                        document.write('<option value="'+i+'">'+i+'</option>');
+                    }
+                    </script>
+              </select>
+        </fieldset>
+              <h3><u>Course to be choosen</u></h3>
+              <label for="course" required><b>Select a Course:&nbsp</b></label>
+              <select id="course" name="course" required>
+                <option>Select an Option</option>
+                <option>IT</option>
+                <option>CSE</option>
+                <option>ECE</option>
+                <option>EEE</option>
+                <option>MECH</option>
+                <option>CIVIL</option>
+        </select><br><br>
+        <input type="submit" style=" background-color: goldenrod; cursor: pointer;">
+    </form>
+</div>
+</div>
+</body>
+</html>

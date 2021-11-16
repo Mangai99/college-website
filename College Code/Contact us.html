@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+        }
+        body
+        {
+            font-family: serif;
+        }
+        .container
+        {
+        width: 100%;
+        height: 60vh;
+        padding-top: 3vh;
+        background-image: linear-gradient(#000000c3,#000000c3),url(img/Cnct\ Us.jpg);
+        background-position: 100% 90%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        text-align: center;
+        color: antiquewhite;
+        }
+        .container h3
+        {
+        font-family: 'Times New Roman', Times, serif;
+        word-spacing: 4px;
+        margin-bottom: 10px;
+        color: skyblue;
+        }
+        .container p
+        {
+        margin-bottom: 20px;
+        word-spacing: 2px;
+        letter-spacing: 1px;
+        font-family: serif;
+        }
+        .content-box
+        {
+            width: 500px;
+            background-color: cornsilk;
+            box-shadow: 0 0 20px 0 #999;
+            top: 700px;
+            right: 180px;
+            transform: translate(-50%,-50%);
+            position: absolute;
+            flex: 1 1 40rem;
+        }
+        .content-box h2
+        {
+            font-size: 25px;
+            color: darkmagenta;
+            padding-left: 170px;
+            padding-right: 150px;
+            padding-top: 10px;
+        }
+        form
+        {
+            margin: 35px;
+        }
+        .input-field
+        {
+            width: 400px;
+            height: 40px;
+            margin-top: 20px;
+            padding-left: 10px;
+            padding-right: 10px;
+            border: 1px solid #777;
+            border-radius: 14px;
+            outline: none;
+        }
+        .textarea-field
+        {
+            height: 150px;
+            padding-top: 10px;
+        }
+        .btn
+        {
+            border-radius: 20px;
+            color: #fff;
+            margin-top: 18px;
+            padding: 10px;
+            background-color: darkcyan;
+            font-size: 12px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="padding-bottom: 25px; color: crimson;">Contact With Us</h1>
+        <h3>Address</h3>
+        <p>4671,Sugar Main Road,<br>Poonamallee,<br>Chennai.<br>600123</p>
+        <h3>Phone Number</h3>
+        <p>9195924378</p>
+        <h3>Email</h3>
+        <p>masengclg90@gmail.com</p>
+    </div>
+    <div class="content-box">
+        <h2>Send a Message</h2>
+            <form>
+                <label for="Name"><b>Name</b></label>
+                <input type="text" class="input-field" placeholder="Enter Your Name" required><br><br>
+                <label for="email"><b>Email</b></label>
+                <input type="email" class="input-field" placeholder="Enter Your Email Id" required><br><br>
+                <label for="subject"><b>Subject</b></label>
+                <textarea type="text" row="5" column="8" class="input-field textarea-field" placeholder="Write Your Message..." required></textarea><br>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        .flex-container
+        {
+            display: flex;
+        }
+        .flex-container div
+        {
+            flex: 1;
+        }
+        .flex-container a
+        {
+            text-decoration: none;
+            color: purple;
+        }
+        .flex-container a:hover
+        {
+            text-decoration: underline;
+        }
+        .container
+        {
+            background-image: linear-gradient(#00000048,#00000048),url(img/Login.jpg);
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            height: 700px;
+            align-items: center;
+        }
+        .login
+        {
+            background-color: rgb(255, 255, 255, 0.7);
+            padding: 10px;
+            width: 400px;
+        }
+        .login h1
+        {
+             color: maroon;
+        }
+        .flex
+        {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 10px;
+        }
+        input[type="text"],[type="password"]
+        {
+            padding: 10px;
+            font-size: 15px;
+        }
+        label
+        {
+            flex-basis: 130px;
+            margin-top: 10px;
+            font-size: 20px;
+        }
+        input[type="submit"]
+        {
+            width: 100%;
+            font-size: 20px;
+            padding: 10px;
+            background-color: purple;
+            color: whitesmoke;
+            border: none;
+            margin: 20px 0;
+        }
+        input[type="submit"]:hover
+        {
+            cursor: pointer;
+            background-color: rebeccapurple;
+        }
+        @media all and (max-width: 480px)
+        {
+            .flex-input
+            {
+                flex-direction: column;
+            }
+            label
+            {
+                flex-basis: 0;
+            }
+        }
+    </style>
+    <script language="javascript">
+        function validate()
+        {
+            var user=document.f1.username.value;
+            var pass=document.f1.pass.value;
+               sp=0;
+               for(i=0;i<user.length;i++)
+               {
+                   ch=user.charAt(i);
+                   if(ch==' ')
+                   sp=1;
+               }
+               alphadigit=0;
+               alpha=/[a-zA-Z]/;
+               digit=/[0-9]/;
+               if(pass.match(alpha)&&pass.match(digit))
+               alphadigit=1;
+               if(sp==1)
+               {
+                alert("please enter a username without space");
+                return false;
+               }
+               else if(user==""||user.length<6)
+               {
+                alert("please enter a valid username with length atleast 6");
+                return false;
+               }
+               else if(pass==""||pass.length<9)
+               {
+                alert("please enter a valid password with length atleast 9");
+                return false;
+               }
+               else if(alphadigit==0)
+               {
+                   alert("please enter atleast one alphabet and atleast one digit");
+                   return false;
+               }
+               else
+               {
+                   alert("Successfully Logged in");
+                   return true;
+               }
+            return true;
+        }
+    </script>
+</head>
+<body class="container">
+    <form action="" class="login" name="f1" onsubmit="return validate()">
+        <p id="error"></p>
+        <h1>Account Login</h1>
+            <div class="flex">
+                <label><b>Username</b></label>
+                <input type="text" name="username" placeholder="Username">  
+            </div>
+            <div class="flex">
+                <label><b>Password</b></label>
+                <input type="password" name="pass" placeholder="Password">
+            </div>
+            <div>
+                <input class="button" type="submit" value="Log in">
+            </div>
+            <div class="flex-container">
+                <div>
+                    <input type="checkbox">
+                    <span>Remember me</span>
+                </div>
+                <div style="text-align: center;">
+                    <a href="#">Sign Up</a>
+                </div>
+                <div style="text-align: right;">
+                    <a href="#">Forgot Password?</a>
+                </div>
+            </div>
+    </form>
+</body>
+</html>
